@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: {{ .Release.Name }}
+    kubeVersion: {{ .Capabilities.KubeVersion }}
+  name: {{ .Release.Name }}
+spec:
+  containers:
+  - image: nginx
+    name: ped
